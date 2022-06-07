@@ -7,9 +7,8 @@ int main(void)
 {
 	int contador = 0;
 	int thousand;
+	for (thousand = 0; thousand <= 9; thousand++){
 
-	for (thousand = 0; thousand <= 9; thousand++)
-	{
 		int hundred;
 
 		for (hundred = 0; hundred <= 9; hundred++)
@@ -22,19 +21,19 @@ int main(void)
 
 				for (unit = 0; unit <= 9; unit++)
 				{
-					if (((dozen + '0') + (unit + '0')) > ((thousand + '0') + (hundred + '0')))
+					if (unit > hundred && dozen > hundred)
 					{
-					if (contador > 0)
-					{
-					putchar(',');
-					putchar(' ');
-					}
-					++contador;
-					putchar(thousand % 10 + '0');
-					putchar(hundred % 10 + '0');
-					putchar(' ');
-					putchar(dozen % 10 + '0');
-					putchar(unit % 10 + '0');
+						if (contador > 0)
+						{
+							putchar(',');
+							putchar(' ');
+						}
+						++contador;
+						putchar(thousand % 10 + '0');
+						putchar(hundred % 10 + '0');
+						putchar(' ');
+						putchar(dozen % 10 + '0');
+						putchar(unit % 10 + '0');
 					}
 				}
 			}
