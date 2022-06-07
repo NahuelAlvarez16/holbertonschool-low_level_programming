@@ -5,14 +5,14 @@
  */
 int main(void)
 {
-	char number;
+	int number;
 
-	for (number = '0'; number  <= '9'; number++)
+	for (number = 0; number  <= 9; number++)
 	{
-		if (number > '0')
+		if (number > 0)
 			putchar(' ');
-		putchar(number);
-		if (number < '9')
+		putchar(number % 10 + '0');
+		if (number < 9)
 			putchar(',');
 	}
 	printf("\n");
