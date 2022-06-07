@@ -22,7 +22,7 @@ int main(void)
 
 				for (unit = 0; unit <= 9; unit++)
 				{
-					if (((dozen + '0') + (unit + '0')) > ((thousand + '0') + (hundred + '0')))
+					if (((dozen * 10) + unit) > ((thousand * 10) + hundred))
 					{
 					if (contador > 0)
 					{
