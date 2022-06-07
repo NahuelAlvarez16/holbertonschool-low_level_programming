@@ -5,7 +5,9 @@
  */
 int main(void)
 {
-	for (char alphabet = 'a'; alphabet  <= 'z'; alphabet++)
+	char alphabet;
+
+	for (alphabet = 'a'; alphabet  <= 'z'; alphabet++)
 		putchar(alphabet);
 	putchar('\n');
 	return (0);
