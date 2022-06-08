@@ -8,7 +8,7 @@ int main(void)
 {
 	char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
 	int position;
-	int len = strlen(messege);
+	int len = strlen(msg);
 
 	for (position = 0; position < len; position++)
 	{
