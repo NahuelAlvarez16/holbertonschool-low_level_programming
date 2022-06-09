@@ -1,8 +1,6 @@
 #include "main.h"
 /**
  * jack_bauer - Print every minute of the day
- * @n: Is un number
- * Return: Always 0.
  */
 void jack_bauer(void)
 {
@@ -11,7 +9,7 @@ void jack_bauer(void)
 	for (hour = 0; hour < 24; hour++)
 	{
 		int minute;
-	
+
 		for (minute = 0; minute < 60; minute++)
 		{
 			_putchar(hour / 10 + '0');
