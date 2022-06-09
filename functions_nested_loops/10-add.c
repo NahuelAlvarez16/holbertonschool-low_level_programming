@@ -1,8 +1,9 @@
 #include "main.h"
 /**
  * add - Add two intergers
- * @c: Is un number
- * Return: Always 0.
+ * @a: First number
+ * @b: Second number
+ * Return: Add a and b
  */
 int add(int a, int b)
 {
