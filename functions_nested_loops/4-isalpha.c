@@ -1,7 +1,7 @@
 #include "main.h"
 #include <ctype.h>
 /**
- * _islower - Checks for lowercase character.
+ * _isalpha - Checks for lowercase character.
  * @c: Value with ASCII code
  * Return: Always 0.
  */
