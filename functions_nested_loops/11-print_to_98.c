@@ -12,7 +12,7 @@ void print_to_98(int n)
 
 	while (!stop)
 	{
-		char N[3];
+		char N[10];
 		int position;
 		int len;
 
