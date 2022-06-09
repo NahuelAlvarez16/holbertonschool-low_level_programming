@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 #include <string.h>
 /**
  * main - Print with proper grammar, but the outcome is a piece of art,
@@ -12,8 +12,8 @@ int main(void)
 
 	for (position = 0; position < len; position++)
 	{
-		putchar(msg[position]);
+		_putchar(msg[position]);
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
