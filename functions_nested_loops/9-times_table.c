@@ -10,7 +10,7 @@ void times_table(void)
 	{
 		int result = digit * multiplicate;
 
-		_putchar((result / 10) ? result / 10 + '0' : 0);
+		_putchar((result / 10) ? result / 10 + '0' : ' ');
 		_putchar(result % 10 + '0');
 
 		if (multiplicate < 9)
