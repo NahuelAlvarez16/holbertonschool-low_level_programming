@@ -1,5 +1,4 @@
 #include "main.h"
-#include <ctype.h>
 /**
  * _islower - Checks for lowercase character.
  * @c: Value with ASCII code
@@ -7,7 +6,7 @@
  */
 int _isupper(int c)
 {
-	if (islower(c))
-		return (0);
-	return (1);
+	if (c >= 65 && c <= 90)
+		return (1);
+	return (0);
 }
