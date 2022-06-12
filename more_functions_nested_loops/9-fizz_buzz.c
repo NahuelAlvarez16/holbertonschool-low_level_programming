@@ -4,7 +4,7 @@
  * print_line - Print 0 to 100
  * Return: Always 0.
  */
-void main (void)
+void main (int)
 {
 	int i = 0;
 
@@ -22,4 +22,5 @@ void main (void)
 		printf(" ");
 	}
 	_putchar('\n');
+	return (0);
 }
