@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_line - Print 0 to 14
+ * print_diagonal - Draws a diagonal line
  * @n: Length of line
  * Return: Always 0.
  */
