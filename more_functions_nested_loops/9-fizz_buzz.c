@@ -4,13 +4,13 @@
  * print_line - Print 0 to 100
  * Return: Always 0.
  */
-void main (int)
+int main (void)
 {
 	int i = 0;
 
 	while (i <= 100)
 	{
-		i++
+		i++;
 		if (i % 3 == 0 && i % 5 == 0)
 			printf("FizzBuzz");
 		else if (i % 3 == 0)
