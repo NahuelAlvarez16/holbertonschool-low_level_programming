@@ -8,7 +8,7 @@ void print_square(int n)
 {
 	int i = 0;
 
-	for (; i <= n; i++)
+	for (; i < n; i++)
 	{
 		int j;
 
