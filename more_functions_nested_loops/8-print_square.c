@@ -12,8 +12,8 @@ void print_square(int n)
 	{
 		int j;
 
-		for (j = 0; j < i; j++)
+		for (j = 0; j <= i; j++)
 			_putchar('#');
+		_putchar('#');
 	}
-	_putchar('\n');
 }
