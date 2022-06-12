@@ -1,17 +1,17 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_line - Print 0 to 100
+ * main - Print 0 to 100
  * Return: Always 0.
  */
-int main (void)
+int main(void)
 {
 	int i = 0;
 
 	while (i < 100)
 	{
 		i++;
-		if (i % 3 == 0 && i % 5 == 0)
+		if (i % 15 == 0)
 			printf("FizzBuzz");
 		else if (i % 3 == 0)
 			printf("Fizz");
