@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <string.h>
 /**
  * print_times_table - Print times table.
  * @n: Prints the n
@@ -10,12 +12,16 @@ void print_times_table(int n)
 	while (digit <= n)
 	{
 		int result = digit * multiplicate;
+		char N[10];
+		int position;
+		int len;
 
-		if (result > 99)
-			_putchar(result / 100 + '0');
-		if (multiplicate > 0)
-		_putchar((result > 99)  ? ((result / 10) % 10) + '0' : (result > 9) ? result / 10 + '0' : ' ');
-		_putchar(result % 10 + '0');
+		sprintf(N, "%d", result);
+		len = strlen(N);
+		for (position = 0; position < len; position++)
+		{
+			_putchar(N[position]);
+		}
 
 		if (multiplicate < n)
 		{
