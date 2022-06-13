@@ -7,7 +7,7 @@ void print_times_table(int n)
 {
 	int digit = 0, multiplicate = 0;
 
-	while (digit < n)
+	while (digit <= n)
 	{
 		int result = digit * multiplicate;
 
@@ -18,6 +18,8 @@ void print_times_table(int n)
 		if (multiplicate < n)
 		{
 			_putchar(',');
+			_putchar(' ');
+			_putchar(' ');
 			_putchar(' ');
 			multiplicate++;
 		}
