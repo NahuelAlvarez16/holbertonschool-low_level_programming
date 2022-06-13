@@ -21,6 +21,7 @@ void print_times_table(int n)
 		{
 			_putchar(',');
 			_putchar(' ');
+			if((multiplicate + 1) * digit > 99)
 			_putchar(' ');
 			multiplicate++;
 		}
