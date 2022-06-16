@@ -15,7 +15,6 @@ void print_array(int *a, int n)
 		i++;
 		if (*(a + i) && i != n)
 			printf(", ");
-		else
-			printf("\n");
 	}
+			printf("\n");
 }
