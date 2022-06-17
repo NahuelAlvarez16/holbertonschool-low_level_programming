@@ -16,7 +16,7 @@ void reverse_array(int *a, int n)
 
 	middle = lenght % 2 == 0 ? lenght / 2 : lenght / 2 + 1;
 
-	while (middle > i)
+	while (middle > i && n)
 	{
 		temp = *(a + i);
 		*(a + i) = *(a + (lenght - 1 - i));
