@@ -1,15 +1,20 @@
 #include "main.h"
 /**
  * reverse_array - Int in reverse
- * @s: string
+ * @a: Int of array
  * @n: limit
  */
 void reverse_array(int *a, int n)
 {
-	int i = 0;
+	int i = 0, temp;
+
+	n--;
 	while (i < n)
 	{
-		a[i] = a[n - i - 1];
+		temp = a[i];
+		a[i] = a[n];
+		a[n] = temp;
+		n--;
 		i++;
 	}
 }
