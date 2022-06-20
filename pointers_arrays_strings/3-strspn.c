@@ -14,6 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		int x = 0;
 		int found = 0;
+
 		while (accept[x] && !found)
 		{
 			if (accept[x] == s[i])
@@ -24,7 +25,7 @@ unsigned int _strspn(char *s, char *accept)
 				x++;
 		}
 		if (!found)
-			count++;
+			return (count);
 		i++;
 	}
 	return (count);
