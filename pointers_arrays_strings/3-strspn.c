@@ -14,7 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		int x = 0;
 
-		while (accept[x] || x >= 0)
+		while (accept[x] && x >= 0)
 		{
 			if (accept[x] == s[i])
 			{
