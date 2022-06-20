@@ -13,17 +13,17 @@ unsigned int _strspn(char *s, char *accept)
 	while (s[i])
 	{
 		int x = 0;
-
-		while (accept[x] && x >= 0)
+		int found = 0;
+		while (accept[x] && !found)
 		{
 			if (accept[x] == s[i])
 			{
-				x = -1;
+				found = 1;
 			}
 			else
 				x++;
 		}
-		if (x != -1)
+		if (!found)
 			count++;
 		i++;
 	}
