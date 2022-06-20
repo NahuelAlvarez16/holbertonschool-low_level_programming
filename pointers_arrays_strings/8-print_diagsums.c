@@ -13,7 +13,7 @@ void print_diagsums(int *a, int size)
 	while (i < size)
 	{
 		result[0] += a[(i * size) + i];
-		result[1] += a[(size * (size - i)) - i];
+		result[1] += a[(size - 1) * (i + 1)];
 		i++;
 	}
 	printf("%d, %d\n", result[0], result[1]);
