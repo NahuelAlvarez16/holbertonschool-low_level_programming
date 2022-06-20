@@ -15,7 +15,7 @@ char *leet(char *str)
 		int x = 0;
 
 		for (; letters[x] && x >= 0; x++)
-			if (str[i] == letters[x] || str[i] == letters[x] - 32)
+			if (str[i] == letters[x] || str[i] == (letters[x] + 32))
 			{
 				str[i] = numbers[x];
 				x = -1;
