@@ -11,8 +11,8 @@ void print_diagsums(int *a, int size)
 
 	while (i < size)
 	{
-		result[0] += a[i][i / 1];
-		result[1] += a[size - i][size - i];
+		result[0] += *a[i][i / 1];
+		result[1] += *a[size - i][size - i];
 		i++;
 	}
 
