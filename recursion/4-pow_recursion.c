@@ -7,5 +7,5 @@
  */
 int _pow_recursion(int x, int y)
 {
-	return (y > 0 ? (_pow_recursion(x, y - 1) * x) : 1);
+	return (y > 0 ? (_pow_recursion(x, y - 1) * x) : y < 0 ? -1 : 1);
 }
