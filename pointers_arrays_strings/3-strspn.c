@@ -21,8 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				found = 1;
 			}
-			else
-				x++;
+			x++;
 		}
 		if (!found)
 			return (count);
