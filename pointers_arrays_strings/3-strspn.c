@@ -8,24 +8,22 @@
 unsigned int *_strspn(char *s, char *accept)
 {
 	int i = 0;
-	unsigned int count = 0;
+	int count = 0;
 
 	while (s[i])
 	{
 		int x = 0;
-		int found = 0;
 
-		while (accept[x])
+		while (accept[x] || x >= 0)
 		{
 			if (accept[x] == s[i])
 			{
-				found++;
-				break;
+				x = -1;
 			}
 			else
 				x++;
 		}
-		if (!found)
+		if (x == -1)
 			count++;
 		i++;
 	}
