@@ -8,7 +8,6 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	int i = 0;
-	int count = 0;
 
 	while (s[i])
 	{
@@ -24,7 +23,7 @@ unsigned int _strspn(char *s, char *accept)
 			x++;
 		}
 		if (!found)
-			return (count);
+			return (i);
 		i++;
 	}
 	return (count);
