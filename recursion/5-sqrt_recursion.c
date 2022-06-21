@@ -8,7 +8,7 @@
 int _sqrt_recursion_int(int n, int i)
 {
 	return (n > i ? (i * i == n) ? (i) :
-		_sqrt_recursion_int(n, i + 1)) : (-1);
+		_sqrt_recursion_int(n, i + 1) : (-1));
 }
 
 /**
