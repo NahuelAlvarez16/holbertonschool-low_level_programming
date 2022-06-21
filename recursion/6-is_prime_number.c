@@ -7,7 +7,7 @@
  */
 int is_prime_number_int(int n, int i)
 {
-	return (n > i ? (n % i == 0) ? (1) : is_prime_number_int(n, i + 1) : (1));
+	return (n > i ? (n % i == 0) ? (1) : is_prime_number_int(n, i + 1) : (0));
 }
 
 /**
