@@ -15,9 +15,9 @@ char *str_concat(char *s1,char *s2)
 	unsigned int size2 = 0;
 
 
-	for (; s1[size1]; size1++)
+	for (; s1 && s1[size1]; size1++)
 		;
-	for (; s2[size2]; size2++)
+	for (; s2 && s2[size2]; size2++)
 		;
 	temp = malloc((size1 + size2) + 1);
 
