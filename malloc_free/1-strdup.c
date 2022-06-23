@@ -1,5 +1,3 @@
-#include <string.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 /**
@@ -11,7 +9,7 @@ char *_strdup(char *str)
 {
 	char *temp;
 	unsigned int i = 0;
-	unsigned int size = strlen(str);
+	unsigned int size = sizeof(str);
 
 	if (!size)
 		return (NULL);
