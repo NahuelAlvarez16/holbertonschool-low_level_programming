@@ -11,21 +11,21 @@ int **alloc_grid(int width, int height)
 	int **temp;
 	int i = 0;
 
-	temp = malloc((width) + 1);
+	temp = malloc(heigth1 * sizeof(int*));
 
 	if (temp == NULL)
 		return (NULL);
-	while (i < width)
+	while (i < height)
 	{
 		int x = 0;
-
-		while (x < height)
+		
+		temp[i] = malloc((height) + 1);
+		while (x < width)
 		{
-			temp[i] = malloc((height) + 1);
+			temp[i][x] = 0;
 			x++;
 		}
 		i++;
 	}
-	temp[i] = '\0';
 	return (temp);
 }
