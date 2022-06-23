@@ -23,17 +23,19 @@ char *str_concat(char *s1,char *s2)
 
 	if (temp == NULL)
 		return (NULL);
-	while (i < size1)
-	{
-		temp[i] = s1[i];
-		i++;
-	}
-	while (x < size2)
-	{
-		temp[i] = s2[x];
-		x++;
-		i++;
-	}
+	if (s1 != NULL)
+		while (i < size1)
+		{
+			temp[i] = s1[i];
+			i++;
+		}
+	if (s2 != NULL)
+		while (x < size2)
+		{
+			temp[i] = s2[x];
+			x++;
+			i++;
+		}
 	temp[i] = '\0';
 	return (temp);
 }
