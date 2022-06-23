@@ -6,7 +6,7 @@
  * @s2: Second string
  * Return: return array
  */
-char *str_concat(char *s1,char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	char *temp;
 	unsigned int i = 0;
