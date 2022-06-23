@@ -9,7 +9,10 @@ char *_strdup(char *str)
 {
 	char *temp;
 	unsigned int i = 0;
-	unsigned int size = sizeof(str);
+	unsigned int size = 0;
+
+	for(; str[size]; size++)
+		;
 
 	if (!size)
 		return (NULL);
