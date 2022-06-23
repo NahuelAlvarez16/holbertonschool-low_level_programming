@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * _str_concat - that concatenates two strings.
+ * str_concat - that concatenates two strings.
  * @s1: First string
  * @s2: Second string
  * Return: return array
  */
-char *_str_concat(char *s1,char *s2)
+char *str_concat(char *s1,char *s2)
 {
 	char *temp;
 	unsigned int i = 0;
