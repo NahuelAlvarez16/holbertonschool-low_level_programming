@@ -14,14 +14,12 @@ char *_str_concat(char *s1,char *s2)
 	unsigned int size1 = 0;
 	unsigned int size2 = 0;
 
-	if (str == NULL)
-		return (NULL);
 
 	for (; s1[size1]; size1++)
 		;
 	for (; s2[size2]; size2++)
 		;
-	temp = malloc(size + 1);
+	temp = malloc((size1 + size2) + 1);
 
 	if (temp == NULL)
 		return (NULL);
