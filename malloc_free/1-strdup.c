@@ -19,7 +19,7 @@ char *_strdup(char *str)
 
 	if (temp == NULL)
 		return (NULL);
-	while (i < length)
+	while (i < size)
 	{
 		temp[i] = str[i];
 		i++;
