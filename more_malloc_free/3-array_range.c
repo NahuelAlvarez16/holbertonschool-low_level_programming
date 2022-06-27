@@ -9,7 +9,7 @@
 int *array_range(int min, int max)
 {
 	char *temp;
-
+	int  i = min;
 	if (min > max)
 		return (NULL);
 
@@ -18,7 +18,7 @@ int *array_range(int min, int max)
 	if (temp == NULL)
 		exit(98);
 
-	for (int result = min; result <= max; i++)
-		temp[result - min] = result;
+	for (; i <= max; i++)
+		temp[i - min] = i;
 	return (temp);
 }
