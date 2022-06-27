@@ -12,7 +12,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int i = 0;
 	unsigned int total = (nmemb * size);
 
-	if (total)
+	if (!total)
 		return (NULL);
 
 	temp = malloc(total);
