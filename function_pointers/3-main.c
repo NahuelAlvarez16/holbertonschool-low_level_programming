@@ -13,13 +13,13 @@ int main(int argc, char *argv[])
 	{
 		int first = atoi(argv[1]);
 		int second = atoi(argv[3]);
-
-		if (!second && (argv[2] == "%" || argv[2] == "/"))
+		int (*temp)(int, int);
+		if (!second && (argv[2][0] == '%' || argv[2][0] == '/'))
 		{
 			printf("Error\n");
 			exit(100);
 		}
-		int (*temp)(int, int) = get_op_func(argv[2]);
+		temp = get_op_func(argv[2]);
 
 		if (!temp)
 		{
