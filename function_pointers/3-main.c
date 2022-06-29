@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 		int first = atoi(argv[1]);
 		int second = atoi(argv[3]);
 		int (*temp)(int, int);
+
 		if (!second && (argv[2][0] == '%' || argv[2][0] == '/'))
 		{
 			printf("Error\n");
