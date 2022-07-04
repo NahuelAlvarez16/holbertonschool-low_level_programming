@@ -6,10 +6,10 @@ RM = rm
 all : $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 clean :
-	$(RM) -f *.swp ~*
+	$(RM) -f *.swp *~
 oclean :
 	$(RM) -f $(OBJ)
 fclean :
-	$(RM) -f $(OBJ) *.swp *~
+	$(RM) -f $(OBJ) *.swa *.swp *~
 re :
 	$(CC) -f $(OBJ) -o $(NAME)
