@@ -6,14 +6,12 @@
  */
 void print_all(const char * const format, ...)
 {
-	int x = 0, i = 0;
+	int x = 0;
 	va_list arg;
 	char *tmp;
 
-	while (format[i])
-		i++;
 	va_start(arg, format);
-	while (x < i)
+	while (format && format[x])
 	{
 		switch (format[x])
 		{
@@ -36,7 +34,7 @@ void print_all(const char * const format, ...)
 				printf("%d", va_arg(arg, int));
 				break;
 		}
-		if (x < (i - 1) && (format[x] == 's' || format[x] == 'c' ||
+		if (format[x + 1] && (format[x] == 's' || format[x] == 'c' ||
 				format[x] == 'f' || format[x] == 'i'))
 			printf(", ");
 		x++;
