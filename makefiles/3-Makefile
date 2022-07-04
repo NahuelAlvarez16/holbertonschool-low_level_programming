@@ -12,4 +12,4 @@ oclean :
 fclean :
 	$(RM) -f $(OBJ) *.swp *~ $(NAME)
 re :
-	$(CC) -f $(OBJ) -o $(NAME)
+	make -f 3-Makefile oclean all
