@@ -37,7 +37,7 @@ void print_all(const char * const format, ...)
 				printf("%d", va_arg(arg, int));
 				break;
 		}
-		if (x < i - 1 && (format[x] == 's' || format[x] == 'c' ||
+		if (x < (i - 1) && (format[x] == 's' || format[x] == 'c' ||
 					format[x] == 'f' || format[x] == 'i'))
 			printf(", ");
 		x++;
