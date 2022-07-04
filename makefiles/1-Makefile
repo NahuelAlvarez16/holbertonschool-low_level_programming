@@ -1,4 +1,4 @@
 SRC = main.c school.c
 CC = gcc
 all: SRC
-	CC SRC school
+	CC SRC -o school
