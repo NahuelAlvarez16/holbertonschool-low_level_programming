@@ -25,8 +25,7 @@ void print_all(const char * const format, ...)
 				if (tmp)
 				{
 					printf("%s", tmp);
-					x++;
-					continue;
+					break;
 				}
 				printf("(nil)");
 				break;
@@ -37,8 +36,8 @@ void print_all(const char * const format, ...)
 				printf("%d", va_arg(arg, int));
 				break;
 		}
-		if (x < (i) && (format[x] == 's' || format[x] == 'c' ||
-					format[x] == 'f' || format[x] == 'i'))
+		if (x < (i - 1) && (format[x] == 's' || format[x] == 'c' ||
+				format[x] == 'f' || format[x] == 'i'))
 			printf(", ");
 		x++;
 	}
