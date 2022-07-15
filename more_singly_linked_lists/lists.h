@@ -2,9 +2,8 @@
 #define LISTS_H
 #include <stddef.h>
 /**
- * struct list_s - Linked lists
- * @str: String
- * @len: Length of @str
+ * struct listint_s - Linked lists
+ * @n: Integer
  * @next: Next Node of list
  */
 typedef struct listint_s
