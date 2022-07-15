@@ -13,7 +13,7 @@ int main(void)
     list_t *head;
 
     head = NULL;
-    add_node(&head, "Anne");
+    add_node_end(&head, "Anne");
     add_node_end(&head, "Colton");
     add_node_end(&head, "Corbin");
     add_node_end(&head, "Daniel");
