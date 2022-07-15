@@ -6,7 +6,7 @@
  * @n: Integer
  * Return: return address new element in the list
  */
-list_t *add_nodeint(list_t **head, const int n)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *new;
 
