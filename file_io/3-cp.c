@@ -39,7 +39,7 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	file_to = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 0660);
+	file_to = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	code_receiver = read(file_from, content, 1024);
 	while (code_receiver)
 	{
