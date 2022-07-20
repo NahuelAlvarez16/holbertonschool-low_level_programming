@@ -36,7 +36,7 @@ int main(int ac, char **av)
 	file_from = open(av[1], O_RDONLY);
 	if (file_from == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", av[1]);
+		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 	file_to = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
