@@ -12,7 +12,8 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file, length;
+	int file;
+       	size_t length;
 	char *content;
 
 	if (!filename)
@@ -28,8 +29,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	for (length = 0; content && content[length]; length++)
 		;
 	content[length] = '\0';
-	if (letters > length)
-		return (length);
 	write(1, content, length);
 	return (length);
 }
