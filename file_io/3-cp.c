@@ -18,43 +18,6 @@ int _strlen(char *src)
 	return (length);
 }
 /**
- * get_file_content - reads a text file and return its content
- * @filename: Name of file
- * Return: return the content of a file
- */
-char *get_file_content(char *filename)
-{
-	int file, code_receiver;
-	char *content;
-
-	content = malloc((sizeof(char) * 1024) + 1);
-	if (!content)
-		return (NULL);
-
-	file = open(filename, O_RDONLY);
-	if (file == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", filename);
-		exit(98);
-	}
-
-	code_receiver = read(file, content, 1024);
-	if (code_receiver == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", filename);
-		exit(98);
-	}
-
-	code_receiver = close(file);
-	if (code_receiver == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d", file);
-		exit(98);
-	}
-	content[_strlen(content)] = '\0';
-	return (content);
-}
-/**
  * main - Program that copies the content of a file to another file.
  * @ac: Length of arguments
  * @av: Arguments
@@ -62,23 +25,37 @@ char *get_file_content(char *filename)
  */
 int main(int ac, char **av)
 {
-	int file, code_receiver;
-	char *content;
+	int code_receiver, file_from, file_to;
+	char content[1024];
 
 	if (ac != 3)
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	content = get_file_content(av[1]);
-	file = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 0660);
-	if (file == -1)
+	file_from = open(av[1], O_RDONLY);
+	if (file_from == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
-	write(file, content, _strlen(content));
-	code_receiver = close(file);
+	}
+	file_to = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 0660);
+	code_receiver = read(file_from, content, 1024);
+	while (code_receiver)
+	{
+		write(file_to, content, code_receiver);
+		code_receiver = read(file_from, content, 1024);
+	}
+	code_receiver = close(file_to);
 	if (code_receiver == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d", file);
+		dprintf(2, "Error: Can't close fd %d", file_to);
+		exit(98);
+	}
+	code_receiver = close(file_from);
+	if (code_receiver == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d", file_from);
 		exit(98);
 	}
 	return (0);
