@@ -48,7 +48,7 @@ int main(int ac, char **av)
 	code_receiver = read(file_from, content, 1024);
 	while (code_receiver)
 	{
-		if (!write(file_to, content, code_receiver))
+		if (write(file_to, content, code_receiver) != code_receiver)
 		{
 			dprintf(2, "Error: Can't write to %s\n", av[2]);
 			exit(99);
