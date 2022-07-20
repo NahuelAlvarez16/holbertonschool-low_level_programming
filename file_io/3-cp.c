@@ -51,18 +51,13 @@ int main(int ac, char **av)
 		code_receiver = read(file_from, content, 1024);
 		if (code_receiver == -1)
 		{
-			dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", av[1]);
+			dprintf(2, "Error: Can't read from file %s\n", av[1]);
 			exit(98);
 		}
 	}
-	if (close(file_to) == -1)
+	if (close(file_to) == -1 || close(file_from) == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d", file_to);
-		exit(100);
-	}
-	if (close(file_from) == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d", file_from);
 		exit(100);
 	}
 	return (0);
