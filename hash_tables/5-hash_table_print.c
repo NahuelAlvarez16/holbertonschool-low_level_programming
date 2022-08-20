@@ -6,7 +6,7 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned int i = 0;
-	hash_node_t *current_node;
+	hash_node_t *current_node = NULL;
 	int print_counter = 0;
 
 	if (ht)
@@ -15,7 +15,7 @@ void hash_table_print(const hash_table_t *ht)
 		while (i < ht->size)
 		{
 		current_node = ht->array[i];
-		while (current_node)
+		while (current_node != NULL)
 		{
 			if (print_counter > 0)
 				printf(", ");
