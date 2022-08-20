@@ -2,7 +2,7 @@
 shash_table_t *shash_table_create(unsigned long int size)
 {
 	unsigned long int i = 0;
-	shash_table_t *shash_table;
+	shash_table_t *shash_table = NULL;
 
 	shash_table = malloc(sizeof(shash_table_t));
 	if (!shash_table)
@@ -22,3 +22,4 @@ shash_table_t *shash_table_create(unsigned long int size)
 		i++;
 	}
 	return (shash_table);
+}
